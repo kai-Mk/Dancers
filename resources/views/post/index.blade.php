@@ -36,6 +36,10 @@
                 padding:8px 15px;
             }
             
+             .delete:hover{
+                box-shadow:none;
+            }
+            
             .show {
                 display:inline-block;
                 border-radius:20%;
@@ -43,7 +47,7 @@
                 text-align:center;
                 cursor:pointer;
                 padding:14px 15px;
-                background:#6666ff;
+                background:#333333;
                 color:#ffffff;
                 line-height:1em;
                 opacity:1;
@@ -51,6 +55,34 @@
                 box-shadow:6px 6px 9px #666666;
             }
             
+            .show:hover{
+                box-shadow:none;
+            }
+            
+            .category {
+                color:red;
+                font-size:2em;
+            }
+            
+            .create {
+                display:inline-block;
+                border-radius:14%;
+                font-size:17pt;
+                text-align:center;
+                cursor:pointer;
+                padding:14px 14px;
+                background:rgba(102, 102, 255, 0.76);
+                color:#ffffff;
+                line-height:1em;
+                opacity:1;
+                transition:.3s;
+                box-shadow:4px 4px 16px #666666;
+            }
+            
+            .create:hover {
+                box-shadow:none;
+                opacity:0.8;
+            }
             
         </style>
     </head>
@@ -60,22 +92,23 @@
         @section('content')
         <div class="main container">
             <div class="page-header">
-                <button type="button"onclick="location.href='/Dancers/create'" class="index_page">動画共有する</button>
+                <button type="button"onclick="location.href='/Dancers/create'" class="create">動画共有する</button>
                
             </div>
-            <div class="nav-header">
+            <div class="nav-header mt-3">
                
                     <ul class="nav nav-tabs">
-                        @foreach($posts as $post)
-                      <li class="nav-item">
-                        <a class="nav-link" href="/Dncers/category/{{ $post->category->id }}">{{ $post->category->category_name }}</a>
-                      </li>
+                      @foreach($categories as $category)
+                          <li class="nav-item border">
+                            <a class="nav-link category" href="/Dncers/category/{{ $category->id }}">{{ $category->category_name }}</a>
+                          </li>
                       @endforeach  
                     </ul>
                    
             </div>
             
             <div class="index mt-3">
+                <h2>投稿一覧</h2>
                 
                 <table class="table table-bordered">
                             <thead>

@@ -52,6 +52,7 @@
             }
             
             
+            
         </style>
     </head>
     <body>
@@ -72,7 +73,7 @@
                         </li>
                        @foreach($posts as $post)
                       <li class="nav-item">
-                        <a class="nav-link" href="/Dncers/category/{{ $post->category->id }}">{{ $post->category->category_name }}</a>
+                        <a class="nav-link category" href="/Dncers/category/{{ $post->category->id }}">{{ $post->category->category_name }}</a>
                       </li>
                       @endforeach 
                     </ul>
@@ -116,7 +117,6 @@
                                     </td>
                                 </tr>
                             </tbody>
-                            
                     @endforeach        
                 </table>
                   {{ $posts->links() }} 
