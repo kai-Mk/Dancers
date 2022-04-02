@@ -32,38 +32,62 @@
                 <div class="text mt-3">
                     <button type="button" onclick="location.href='/Dancers/edit/{{ $post->id }}'">編集する</button>
                     <h5 class="mt-3"><投稿者></h5>
-                    <h2>{{ $post->category->category_name }}</h2>
                     <h2>{{ $post->user->name }}</h2>
-                   
+                    <h5 class="mt-3"><ジャンル></h5>
+                    <h3>{{ $post->category->category_name }}</h3>
                     <h3><タイトル></h3>
                     <h4>{{ $post->title }}</h4>
                     <h3><詳細文></h3>
                     <p>{{ $post->main }}</p>
                 </div>
-                <div class="videos">
-                    <video controls>
-                        <source src={{ $post->video_A }} type="video/mp4">
-                    </video>
-                    @if($post->video_B != null)
-                    <video controls>
-                        <source src={{ $post->video_B }} type="video/mp4">
-                    </video>
-                    @endif
-                    @if($post->video_C != null)
-                    <video controls>
-                        <source src={{ $post->video_C }} type="video/mp4">
-                    </video>
-                    @endif
-                    @if($post->video_D != null)
-                    <video controls>
-                        <source src={{ $post->video_D }} type="video/mp4">
-                    </video>
-                    @endif
-                    @if($post->video_E != null)
-                    <video controls>
-                        <source src={{ $post->video_E }} type="video/mp4">
-                    </video>
-                    @endif
+                <div class="videos ">
+                     <div class="container-fluid">
+                        <div class="row flex-nowrap">
+                            <div class="col-5">
+                                <div class="card">
+                                    <video controls>
+                                        <source src={{ $post->video_A }} type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                             @if($post->video_B != null)
+                                 <div class="col-5">
+                                    <div class="card">
+                                        <video controls>
+                                            <source src={{ $post->video_B }} type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                             @endif
+                             @if($post->video_C != null)
+                                <div class="col-5">
+                                    <div class="card">
+                                        <video controls>
+                                            <source src={{ $post->video_C }} type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            @endif  
+                            @if($post->video_D != null)
+                                <div class="col-5">
+                                    <div class="card">
+                                        <video controls>
+                                            <source src={{ $post->video_D }} type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            @endif
+                            @if($post->video_E != null)
+                                <div class="col-5">
+                                    <div class="card">        
+                                        <video controls>
+                                            <source src={{ $post->video_E }} type="video/mp4">
+                                        </video>
+                                    </div>
+                                </div>
+                            @endif    
+                        </div>
+                    </div>        
                 </div>
                 <div class="comment">
                     <h2>コメント一覧</h2>

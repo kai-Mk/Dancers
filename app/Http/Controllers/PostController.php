@@ -17,7 +17,7 @@ class PostController extends Controller
     //一覧画面の表示
     public function index(Post $post, User $user, Category $category){
         $user = Auth::user();
-        return view('post.index')->with(['posts'=>$post->simplePaginate(10)])->with(['user'=>$user])->;
+        return view('post.index')->with(['posts'=>$post->simplePaginate(10)])->with(['user'=>$user])->with(['categories'=>$category->get()]);
     }
     
     //詳細画面の表示
