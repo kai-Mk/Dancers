@@ -25,7 +25,7 @@
         <div class="container">
             
             <div class="page-header">
-                   <button type="button"onclick="location.href='/Dancers'" class="index_page">投稿一覧へ</button>
+                   <button type="button"onclick="location.href='/'" class="index_page">投稿一覧へ</button>
                     <button type="button"onclick="location.href='/Dancers/create'" class="index_page">動画共有する</button>
             </div> 
             <div class="detail">
@@ -134,7 +134,7 @@
                 </div>
             </div>
             
-            <button class="mt-3" type="button" onclick="location.href='/Dancers/'">戻る</button>
+            <button class="mt-3" type="button" onclick="location.href='/'">戻る</button>
         </div>
         <script>
             function checkDelete() {

@@ -100,7 +100,7 @@
                     </br>
                     <input class="submit mt-3" type="submit" value="投稿する">
                 </form>
-                <button class="mt-3" type="button" onclick="location.href='/Dancers'">戻る</button>
+                <button class="mt-3" type="button" onclick="location.href='/'">戻る</button>
             </div>
         </div> 
         @endsection

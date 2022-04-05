@@ -10,8 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+
+
 Route::group(['middleware' => ['auth']], function(){
-    Route::get('/Dancers', 'PostController@index');  //投稿一覧の表示
+    Route::get('/', 'PostController@index');  //投稿一覧の表示
     
     Route::get('/Dancers/create', 'PostController@create'); //投稿フォーム表示
     Route::post('/Dancers/create', 'PostController@store'); //動画投稿の登録

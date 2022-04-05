@@ -69,7 +69,7 @@
                
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a href="/Dancers" class="index_page nav-link">投稿一覧へ</a>
+                            <a href="/" class="index_page nav-link">投稿一覧へ</a>
                         </li>
                        @foreach($posts as $post)
                       <li class="nav-item">
